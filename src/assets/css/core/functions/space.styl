@@ -1,0 +1,14 @@
+// Spacing
+// =============================================================================
+//
+// I use a 8-Point Grid System
+// https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632
+//
+// return the number of point grid system in rem
+// default value is 1
+//
+// @param   int  coefficient
+// @return  rem
+_space(coefficient = 1) {
+  return _rem( (coefficient * $pt) * 1px )
+}

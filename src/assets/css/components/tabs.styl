@@ -1,0 +1,35 @@
+nav
+  bg($grey-blue)
+  u-full-width()
+  margin-bottom: _space(4)
+  margin-top: -($main-padding-top--m)
+
+
+ul
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 auto
+
+.link
+  padding: 0 _space()
+  display: flex
+  align-items: center
+  line-height: _rem(40px)
+
+  &.router-link-active,
+  &:hover
+    text-decoration: underline
+    color: $light
+
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
++tablet()
+  nav
+    margin-top: -($main-padding-top--t)
+
+  ul
+    height: $header-height--t
+
+  .link
+    height: 100%

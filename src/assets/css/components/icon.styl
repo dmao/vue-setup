@@ -1,0 +1,27 @@
+.icon
+	display: block
+	width: _space(3)
+	height: @width
+	fill: $light
+	color: inherit
+	stroke: currentColor
+	transition: color .25s
+
+	&[icon="arrow-left"]
+		transform: rotate(180deg)
+
+	&[icon="arrow-down"]
+		transform: rotate(90deg)
+
+	&[icon="arrow-up"]
+		transform: rotate(270deg)
+
+	&[icon="arrow-min-left"]
+		transform: rotate(90deg)
+
+	&[icon="arrow-min-right"]
+		transform: rotate(270deg)
+
+	&[icon="arrow-min-top"]
+		transform: rotate(180deg)
+

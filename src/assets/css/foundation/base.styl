@@ -1,0 +1,38 @@
+// Default styles
+// =============================================================================
+//
+// Default body & typographics styles
+// All variables are in core/variables/*
+// This file must not be edited, use the variable file
+//
+
+body
+  set-font-size($base-font-size)
+  line-height: $base-line-height
+  color: $body-text-color
+  font-family: $base-font-family
+  background-color: $body-bg-color
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-text-size-adjust: 100% // prevent bigger font in landscape
+  //- once the left navigation is open
+  //- or if we are in gameplay
+  //- don't let the page scroll
+  &.has-navigation,
+  &.has-game
+    overflow: hidden
+
+
+a
+	color: $light
+	text-decoration: none
+	transition: color .25s
+
+	&:hover,
+	&:focus
+		color: rgba($light, .5)
+		outline: none // remove the :focus outline default Firefox
+
+::selection
+  background: $primary
+  color: $light
+  

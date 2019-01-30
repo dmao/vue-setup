@@ -1,0 +1,41 @@
+// Set the font-size in rem (from pixel)
+// =============================================================================
+//
+// @param  px  font-size
+//
+set-font-size(value) {
+  font-size: _rem(value);
+}
+
+// Set line-height for vertical rhythm
+// =============================================================================
+//
+// @param  rem|px  font-size  font size
+//
+set-line-height(font-size) {
+  unit = unit(font-size);
+  px   = font-size;
+  if (unit == 'rem') {
+    px = _rem(font-size);
+  }
+  line-height: (_vertical-rhythm(px) / _strip-unit(px));
+}
+
+// Set px and rem font-sizes and line-height for vertical rhythm
+// =============================================================================
+//
+// @param  rem|px  font-size
+//
+// h1
+//   set-vr(24px)
+//
+//
+set-vr(font-size) {
+  unit = unit(font-size);
+  rem  = font-size;
+  if (unit == 'px') {
+    rem = _rem(font-size);
+  }
+  set-font-size(rem);
+  set-line-height(rem);
+}

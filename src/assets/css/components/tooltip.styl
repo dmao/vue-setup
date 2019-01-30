@@ -1,0 +1,58 @@
+[data-tooltip],
+[data-tooltip--inverted]
+  position: relative
+  //z-index: 2
+  cursor: pointer
+
+  &:before,
+  &:after
+    cursor: default
+    visibility: hidden
+    opacity: 0
+    pointer-events: none
+
+  &:before
+    position: absolute
+    bottom: calc(100% + 2px)
+    left: 0
+    margin-bottom: 5px
+    padding: _space()
+    white-space: nowrap
+    border-radius: 4px
+    bg($light)
+    color: $dark
+    content: attr(data-tooltip)
+    set-font-size(10px)
+    line-height: _rem(16px)
+    text-transform: uppercase
+    text-align: left // to overwrite the parent
+    
+
+  // triangle
+  &:after
+    position: absolute
+    bottom: calc(100% + 2px)
+    left: _space()
+    width: 0
+    border-top: 5px solid $light
+    border-right: 5px solid transparent
+    border-left: 5px solid transparent
+    content: " "
+    font-size: 0
+    line-height: 0
+
+  // show tooltip on hover
+  &:hover:before,
+  &:hover:after
+    visibility: visible
+    opacity: 1  
+    
+[data-tooltip--inverted]
+  &:before
+    content: attr(data-tooltip--inverted)
+    left: auto
+    right: 0
+
+  &:after
+    left: auto
+    right: _space()  

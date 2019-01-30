@@ -1,0 +1,184 @@
+// shared code for compliance, responsible gaming, close account, etc
+// prefix with `s`
+.s-box
+  box()
+  padding: _space(2)
+  margin: 0 0 _space(2)
+  
+// to be able to display an icon next to the title, like KYC
+// and dislay a tooltip
+// .s-header
+//   h1.s-title Photo of your bank account
+//    kbo-button.s-icon-info(icon="info")
+.s-header
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  margin: 0 0 _space(2)
+
+.s-title--has-header
+  margin: 0
+  position: relative // to set the icon
+  padding: 0 _space(3)
+
+// icon used inside the title
+.s-icon-info
+  height: _rem(16px)
+  width: @height
+  position: absolute
+  top: 3px
+  right: 0
+  >>> .icon
+    height: 100%
+    width: 100%
+
+.s-text--rejected
+  color: $red
+
+.s-text--processing
+  color: $orange 
+
+.s-form-goup
+  margin: 0 0 _space(2)
+
+.s-button
+  width: 100%
+
+.s-list
+  margin: 0 0 0 _space(2)
+
+  &__item
+    position: relative // to place the bullet
+    margin: 0 0 _space(2)
+    padding: 0 0 0 _space(2)
+
+    &:before
+      content: "■"
+      position: absolute
+      left: 0
+      top: -1px
+
+// separator line inside box, like in KYC or close account
+.s-sep
+  height: 1px
+  border: 0
+  margin: 0 0 _space(3)
+  bg($grey)
+
+// separator text for two choice, in KYC
+.s-choice
+  padding: _space(2) 0 _space(4)
+
+// used in KYC, to have a text more close of the title
+.s-subtitle
+  margin: _space(-2) 0 _space(2)
+
+// used in KYC
+.s-upload-zone
+  margin: _space(4) 0 0
+
+// success icon for KYC
+.s-icon-success
+  margin: 0 auto _space(4)
+
+// icons for sessions log
+.s-icon-session
+  display: inline-block
+
+.s-icon-session--success
+  fill: $green
+
+.s-icon-session--failure
+  fill: $red
+  width: _rem(12px)
+  height: @width  
+
+.s-extra-info
+  border: 1px solid $grey
+  padding: _space(3) _space(2) 0
+  position: relative // for the close button
+
+.s-extra-info__close
+  position: absolute
+  top: _space(.5)
+  right: @top
+
+table
+  width: 100%
+  border-collapse: collapse
+  margin: 0 0 _space(4)
+
+  &.is-scrollable
+    table-layout: fixed
+    thead tr
+      display: block
+    tbody
+      max-height: _rem(147px)
+      overflow: auto
+      display: block
+      // width: calc(100% + 4px) 
+      // margin: 0 0 0 -2px
+    th,
+    td
+      width: 200px  
+
+.t-heading,
+.t-item
+  height: _space(4)
+  vertical-align: middle
+  border-color: $dark
+  border-style: solid
+
+.t-heading
+  bg(rgba($light, .2))
+  border-width: 0 0 2px 0
+
+.t-item
+  bg(rgba($light, .1))
+  border-width: 0 0 1px 0
+  //- give a right border to the first 3 el.
+  &:nth-child(-n+3)
+    border-right: 1px solid $dark
+
+// used in marketing, for PRIVACY UPDATE
+.s-indent
+  margin: 0 0 0 _space(4)
+
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
++smalltablet()
+  .s-box
+    padding: _space(4)
+    max-width: $box-setting-width
+    margin: 0 auto _space(2)
+
+  .s-button
+    display: block
+    width: $form-setting-width
+    margin: 0 auto _space(2)
+
+  .s-form-center
+    margin: 0 auto
+    width: $form-setting-width
+  
+  .s-title--has-header
+    padding: 0
+  
+  // icon used inside the title
+  .s-icon-info
+    right: _space(-3)
+
+  // used in KYC
+  .s-upload-zone
+    margin: _space(4) 0 _space(4)   
+
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
++tablet()
+  .s-extra-info__close
+    top: _space(1)
+    right: @top
+
+  .s-box
+    padding: _space(4) _space(7)

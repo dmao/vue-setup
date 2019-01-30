@@ -1,0 +1,19 @@
+// class to have a layout with the elements centered
+// used for signup, registration, lost password, verify email
+//
+// the height of the top toolbar or navigation is removed
+.container-center
+  min-height: "calc( 100vh - %s )" % $header-height--m
+
+  // center the content vertical & horizontal
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: _space(2) 0
+
+  //
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  +tablet()
+    margin-top: -($main-padding-top--t)
+    min-height: "calc( 100vh - %s )" % $header-height--t

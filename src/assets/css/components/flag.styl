@@ -1,0 +1,755 @@
+.flag
+  &:before
+    image-replacement("flags/sprite-flags-2x.png", 24px, 24px, 0 -24px)
+    margin-right: _space()
+    display: inline-block
+    line-height: @height
+    vertical-align: middle
+
+    // Do not shrink/grow when inside a flex container
+    flex: 0 0 24px
+
+  // countries used
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  &.se:before
+    background-position: -192px -288px
+
+  &.no:before
+    background-position: -288px -240px
+
+  &.fi:before
+    background-position: -72px -120px
+
+  &.ca:before
+    background-position: -96px -72px
+
+  &.au:before
+    background-position: -360px -24px
+
+  &.gb:before
+    background-position: -240px -120px
+
+  // other countries
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  &.ad:before
+    background-position: -48px -24px
+
+  &.ae:before
+    background-position: -72px -24px
+
+  &.af:before
+    background-position: -96px -24px
+
+  &.ag:before
+    background-position: -120px -24px
+
+  &.ai:before
+    background-position: -144px -24px
+
+  &.al:before
+    background-position: -168px -24px
+
+  &.am:before
+    background-position: -192px -24px
+
+  &.an:before
+    background-position: -216px -24px
+
+  &.ao:before
+    background-position: -240px -24px
+
+  &.aq:before
+    background-position: -264px -24px
+
+  &.ar:before
+    background-position: -288px -24px
+
+  &.as:before
+    background-position: -312px -24px
+
+  &.at:before
+    background-position: -336px -24px
+
+  &.aw:before
+    background-position: -384px -24px
+
+  &.ax:before
+    background-position: 0 -48px
+
+  &.az:before
+    background-position: -24px -48px
+
+  &.ba:before
+    background-position: -48px -48px
+
+  &.bb:before
+    background-position: -72px -48px
+
+  &.bd:before
+    background-position: -96px -48px
+
+  &.be:before
+    background-position: -120px -48px
+
+  &.bf:before
+    background-position: -144px -48px
+
+  &.bg:before
+    background-position: -168px -48px
+
+  &.bh:before
+    background-position: -192px -48px
+
+  &.bi:before
+    background-position: -216px -48px
+
+  &.bj:before
+    background-position: -240px -48px
+
+  &.bl:before
+    background-position: -264px -48px
+
+  &.bm:before
+    background-position: -288px -48px
+
+  &.bn:before
+    background-position: -312px -48px
+
+  &.bo:before
+    background-position: -336px -48px
+
+  &.br:before
+    background-position: -360px -48px
+
+  &.bs:before
+    background-position: -384px -48px
+
+  &.bt:before
+    background-position: 0 -72px
+
+  &.bw:before
+    background-position: -24px -72px
+
+  &.bv // no flag: Bouvet Island
+    background-position: -999px -999px
+
+  &.by:before
+    background-position: -48px -72px
+
+  &.bz:before
+    background-position: -72px -72px
+
+  &.cc:before
+    background-position: -120px -72px
+
+  &.cd:before
+    background-position: -144px -72px
+
+  &.cf:before
+    background-position: -168px -72px
+
+  &.cg:before
+    background-position: -192px -72px
+
+  &.ch:before
+    background-position: -216px -72px
+
+  &.ci:before
+    background-position: -240px -72px
+
+  &.ck:before
+    background-position: -264px -72px
+
+  &.cl:before
+    background-position: -288px -72px
+
+  &.cm:before
+    background-position: -312px -72px
+
+  &.cn:before
+    background-position: -336px -72px
+
+  &.co:before
+    background-position: -360px -72px
+
+  &.cr:before
+    background-position: -384px -72px
+
+  &.cu:before
+    background-position: 0 -96px
+
+  &.cv:before
+    background-position: -24px -96px
+
+  &.cw:before
+    background-position: -48px -96px
+
+  &.cx:before
+    background-position: -72px -96px
+
+  &.cy:before
+    background-position: -96px -96px
+
+  &.cz:before
+    background-position: -120px -96px
+
+  &.de:before
+    background-position: -144px -96px
+
+  &.dj:before
+    background-position: -168px -96px
+
+  &.dk:before
+    background-position: -192px -96px
+
+  &.dm:before
+    background-position: -216px -96px
+
+  &.do:before
+    background-position: -240px -96px
+
+  &.dz:before
+    background-position: -264px -96px
+
+  &.ec:before
+    background-position: -288px -96px
+
+  &.ee:before
+    background-position: -312px -96px
+
+  &.eg:before
+    background-position: -336px -96px
+
+  &.eh:before
+    background-position: -360px -96px
+
+  &.er:before
+    background-position: -384px -96px
+
+  &.es:before
+    background-position: 0 -120px
+
+  &.et:before
+    background-position: -24px -120px
+
+  &.eu:before
+    background-position: -48px -120px
+
+  &.fj:before
+    background-position: -96px -120px
+
+  &.fk:before
+    background-position: -120px -120px
+
+  &.fm:before
+    background-position: -144px -120px
+
+  &.fo:before
+    background-position: -168px -120px
+
+  &.fr:before
+    background-position: -192px -120px
+
+  &.ga:before
+    background-position: -216px -120px
+
+  &.gd:before
+    background-position: -264px -120px
+
+  &.ge:before
+    background-position: -288px -120px
+
+  &.gf:before
+    background-position: -192px -360px
+
+  &.gg:before
+    background-position: -312px -120px
+
+  &.gh:before
+    background-position: -336px -120px
+
+  &.gi:before
+    background-position: -360px -120px
+
+  &.gl:before
+    background-position: -384px -120px
+
+  &.gm:before
+    background-position: 0 -144px
+
+  &.gn:before
+    background-position: -24px -144px
+
+  &.gq:before
+    background-position: -48px -144px
+
+  &.gr:before
+    background-position: -72px -144px
+
+  &.gs:before
+    background-position: -96px -144px
+
+  &.gt:before
+    background-position: -120px -144px
+
+  &.gu:before
+    background-position: -144px -144px
+
+  &.gw:before
+    background-position: -168px -144px
+
+  &.gy:before
+    background-position: -192px -144px
+
+  &.hk:before
+    background-position: -216px -144px
+
+  &.hm // no flag: Heard Island and Mcdonald Islands
+    background-position: -999px -999px
+
+  &.hn:before
+    background-position: -240px -144px
+
+  &.hr:before
+    background-position: -264px -144px
+
+  &.ht:before
+    background-position: -288px -144px
+
+  &.hu:before
+    background-position: -312px -144px
+
+  &.ic:before
+    background-position: -336px -144px
+
+  &.id:before
+    background-position: -360px -144px
+
+  &.ie:before
+    background-position: -384px -144px
+
+  &.il:before
+    background-position: 0 -168px
+
+  &.im:before
+    background-position: -24px -168px
+
+  &.in:before
+    background-position: -48px -168px
+
+  &.io:before
+    background-position: -168px -360px
+
+  &.iq:before
+    background-position: -72px -168px
+
+  &.ir:before
+    background-position: -96px -168px
+
+  &.is:before
+    background-position: -120px -168px
+
+  &.it:before
+    background-position: -144px -168px
+
+  &.je:before
+    background-position: -168px -168px
+
+  &.jm:before
+    background-position: -192px -168px
+
+  &.jo:before
+    background-position: -216px -168px
+
+  &.jp:before
+    background-position: -240px -168px
+
+  &.ke:before
+    background-position: -264px -168px
+
+  &.kg:before
+    background-position: -288px -168px
+
+  &.kh:before
+    background-position: -312px -168px
+
+  &.ki:before
+    background-position: -336px -168px
+
+  &.km:before
+    background-position: -360px -168px
+
+  &.kn:before
+    background-position: -384px -168px
+
+  &.kp:before
+    background-position: 0 -192px
+
+  &.kr:before
+    background-position: -24px -192px
+
+  &.kw:before
+    background-position: -48px -192px
+
+  &.ky:before
+    background-position: -72px -192px
+
+  &.kz:before
+    background-position: -96px -192px
+
+  &.la:before
+    background-position: -120px -192px
+
+  &.lb:before
+    background-position: -144px -192px
+
+  &.lc:before
+    background-position: -168px -192px
+
+  &.li:before
+    background-position: -192px -192px
+
+  &.lk:before
+    background-position: -216px -192px
+
+  &.lr:before
+    background-position: -240px -192px
+
+  &.ls:before
+    background-position: -264px -192px
+
+  &.lt:before
+    background-position: -288px -192px
+
+  &.lu:before
+    background-position: -312px -192px
+
+  &.lv:before
+    background-position: -336px -192px
+
+  &.ly:before
+    background-position: -360px -192px
+
+  &.ma:before
+    background-position: -384px -192px
+
+  &.mc:before
+    background-position: 0 -216px
+
+  &.md:before
+    background-position: -24px -216px
+
+  &.me:before
+    background-position: -48px -216px
+
+  &.mf:before
+    background-position: -72px -216px
+
+  &.mg:before
+    background-position: -96px -216px
+
+  &.mh:before
+    background-position: -120px -216px
+
+  &.mk:before
+    background-position: -144px -216px
+
+  &.ml:before
+    background-position: -168px -216px
+
+  &.mm:before
+    background-position: -192px -216px
+
+  &.mn:before
+    background-position: -216px -216px
+
+  &.mo:before
+    background-position: -240px -216px
+
+  &.mp:before
+    background-position: -264px -216px
+
+  &.mq:before
+    background-position: -288px -216px
+
+  &.mr:before
+    background-position: -312px -216px
+
+  &.ms:before
+    background-position: -336px -216px
+
+  &.mt:before
+    background-position: -360px -216px
+
+  &.mu:before
+    background-position: -384px -216px
+
+  &.mv:before
+    background-position: 0 -240px
+
+  &.mw:before
+    background-position: -24px -240px
+
+  &.mx:before
+    background-position: -48px -240px
+
+  &.my:before
+    background-position: -72px -240px
+
+  &.mz:before
+    background-position: -96px -240px
+
+  &.na:before
+    background-position: -120px -240px
+
+  &.nc:before
+    background-position: -144px -240px
+
+  &.ne:before
+    background-position: -168px -240px
+
+  &.nf:before
+    background-position: -192px -240px
+
+  &.ng:before
+    background-position: -216px -240px
+
+  &.ni:before
+    background-position: -240px -240px
+
+  &.nl:before
+    background-position: -264px -240px
+
+  &.np // no outline: Nepal
+    background-position: -312px -240px
+
+  &.nr:before
+    background-position: -336px -240px
+
+  &.nu:before
+    background-position: -360px -240px
+
+  &.nz:before
+    background-position: -384px -240px
+
+  &.om:before
+    background-position: 0 -264px
+
+  &.pa:before
+    background-position: -24px -264px
+
+  &.pe:before
+    background-position: -48px -264px
+
+  &.pf:before
+    background-position: -72px -264px
+
+  &.pg:before
+    background-position: -96px -264px
+
+  &.ph:before
+    background-position: -120px -264px
+
+  &.pk:before
+    background-position: -192px -264px
+
+  &.pl:before
+    background-position: -216px -264px
+
+  &.pn:before
+    background-position: -240px -264px
+
+  &.pm:before
+    background-position: -216px -360px
+
+  &.pr:before
+    background-position: -264px -264px
+
+  &.ps:before
+    background-position: -288px -264px
+
+  &.pt:before
+    background-position: -312px -264px
+
+  &.pw:before
+    background-position: -336px -264px
+
+  &.py:before
+    background-position: -360px -264px
+
+  &.qa:before
+    background-position: -384px -264px
+
+  &.ro:before
+    background-position: 0 -288px
+
+  &.rs:before
+    background-position: -24px -288px
+
+  &.ru:before
+    background-position: -48px -288px
+
+  &.rw:before
+    background-position: -72px -288px
+
+  &.sa:before
+    background-position: -96px -288px
+
+  &.sb:before
+    background-position: -120px -288px
+
+  &.sc:before
+    background-position: -144px -288px
+
+  &.sd:before
+    background-position: -168px -288px
+
+  &.sg:before
+    background-position: -216px -288px
+
+  &.sh:before
+    background-position: -240px -288px
+
+  &.si:before
+    background-position: -264px -288px
+
+  &.sj:before
+    background-position: -240px -360px
+
+  &.sk:before
+    background-position: -288px -288px
+
+  &.sl:before
+    background-position: -312px -288px
+
+  &.sm:before
+    background-position: -336px -288px
+
+  &.sn:before
+    background-position: -360px -288px
+
+  &.so:before
+    background-position: -384px -288px
+
+  &.sr:before
+    background-position: 0 -312px
+
+  &.ss:before
+    background-position: -24px -312px
+
+  &.st:before
+    background-position: -48px -312px
+
+  &.sv:before
+    background-position: -72px -312px
+
+  &.sy:before
+    background-position: -96px -312px
+
+  &.sz:before
+    background-position: -120px -312px
+
+  &.tc:before
+    background-position: -144px -312px
+
+  &.td:before
+    background-position: -168px -312px
+
+  &.tf:before
+    background-position: -192px -312px
+
+  &.tg:before
+    background-position: -216px -312px
+
+  &.th:before
+    background-position: -240px -312px
+
+  &.tj:before
+    background-position: -264px -312px
+
+  &.tk:before
+    background-position: -288px -312px
+
+  &.tl:before
+    background-position: -312px -312px
+
+  &.tm:before
+    background-position: -336px -312px
+
+  &.tn:before
+    background-position: -360px -312px
+
+  &.to:before
+    background-position: -384px -312px
+
+  &.tr:before
+    background-position: 0 -336px
+
+  &.tt:before
+    background-position: -24px -336px
+
+  &.tv:before
+    background-position: -48px -336px
+
+  &.tw:before
+    background-position: -72px -336px
+
+  &.tz:before
+    background-position: -96px -336px
+
+  &.ua:before
+    background-position: -120px -336px
+
+  &.ug:before
+    background-position: -144px -336px
+
+  &.us:before
+    background-position: -168px -336px
+
+  &.uy:before
+    background-position: -192px -336px
+
+  &.uz:before
+    background-position: -216px -336px
+
+  &.va:before
+    background-position: -240px -336px
+
+  &.vc:before
+    background-position: -264px -336px
+
+  &.ve:before
+    background-position: -288px -336px
+
+  &.vg:before
+    background-position: -312px -336px
+
+  &.vi:before
+    background-position: -336px -336px
+
+  &.vn:before
+    background-position: -360px -336px
+
+  &.vu:before
+    background-position: -384px -336px
+
+  &.wf:before
+    background-position: 0 -360px
+
+  &.ws:before
+    background-position: -24px -360px
+
+  &.ye:before
+    background-position: -48px -360px
+
+  &.yt:before
+    background-position: -72px -360px
+
+  &.za:before
+    background-position: -96px -360px
+
+  &.zm:before
+    background-position: -120px -360px
+
+  &.zw:before
+    background-position: -144px -360px

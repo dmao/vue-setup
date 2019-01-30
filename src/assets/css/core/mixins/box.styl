@@ -1,0 +1,17 @@
+// Default box
+// -----------------------------------------------------------------------------
+// the default opacity is 0.5
+// to overwrite this, put the opacity as an argument
+// box(.8) will give background: rgba($dark, .8)
+box($-opacity = .6)
+  border: 1px solid $grey
+  background-color: rgba($dark, $-opacity)
+
+// Default box
+// -----------------------------------------------------------------------------
+// the default opacity is 0.5
+// to overwrite this, put the opacity as an argument
+// mod-kaboo(.8) will give background: rgba($dark, .8)
+box--shadow()
+  border: 1px solid $grey
+  box-shadow: 0 16px 32px 0 $dark

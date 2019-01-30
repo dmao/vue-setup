@@ -1,0 +1,194 @@
+.button
+	-webkit-appearance: none
+	-moz-appearance: none
+	border-radius: 0
+	display: inline-block
+	padding: _rem(7px) _space(2)
+	margin: 0 0 _space(3)
+	position: relative
+	border: 1px solid $light
+	background-color: $light
+	color: $dark
+	outline: none
+	transition: background-color .25s
+
+	// Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding
+	&::-moz-focus-inner
+		border:  none
+		padding: 0
+
+	&:hover,
+	&:focus
+		// box-shadow: 0 2px 2px 0 rgba($dark, .2)
+		color: $light
+		background-color: transparent
+		
+	&:active
+		transform: scale(.99)
+
+	// loading effect
+	&.is-loading
+		pointer-events: none
+		cursor: default
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 4px
+			background: $primary
+			z-index: 1
+			animation: loading 1s infinite  
+
+	// create space for touch device
+	&.has-icon
+		padding: 0
+		background: transparent
+		border: none
+		margin: 0
+		height: _rem(40px)
+		width: @height
+		flex: 0 0 @height
+		display: flex
+		justify-content: center
+		align-items: center
+		&:hover,
+		&:focus
+			opacity: .5
+
+	// disabled state
+	&,
+	&[type="primary"],
+	&[type="secondary"]
+		&:disabled
+			color: $grey-light
+
+	&[type="primary"]
+		background: none
+		color: $light
+
+	&[type="secondary"]
+		background: $dark
+		color: $light
+
+	&[type="primary"],
+	&[type="secondary"]
+		transition: border .25s
+		&:hover,
+		&:focus
+			border: 1px solid $primary
+
+	&[type="flat"]
+		background-color: transparent
+		border: none
+		padding: 0 _space(.5)
+		margin: 0 0 _space(2)
+		&:hover,
+		&:focus
+			text-decoration-color: $primary
+			color: $dark	
+
+	&[size="small"]
+		padding: _rem(7px) _space(2)
+
+	&[size="x-small"]
+		padding: _rem(7px) _space(.5)
+
+	// prevent a regular button followed by a button with icon
+	// like contact page
+	& + &:not(.has-icon)
+		margin: 0 0 _space(3) _space(1)
+
+	&.is-inline
+		margin: 0
+
+		& + &
+			margin: 0 0 0 _space(1)
+
+	&.is-center
+		margin: 0 auto _space(3)
+		display: block
+
+	&.is-stacked
+		display: block
+		margin: 0 auto _space(2)
+		width: 100%
+		& + &
+			margin: 0 auto _space(2)
+
+	&--cta
+		box-shadow: 0 0 4px rgba($dark, .6)
+		margin: 0 0 _space()
+
+	&--mission
+		width: "calc( 100% - %s )" % _rem(56px) // 28px *2
+		margin: 0 auto _space(1)
+		display: block  
+
+	// height different on breakpoint
+	// 24px in mobile, tablet
+	// set-font-size(10px)
+	// 18px after
+	&--responsive
+		padding: _rem(3px) _space(2)
+
+	// height different on breakpoint
+	// 32px in mobile, tablet
+	// 40px after
+	//
+	// font-size: 12px in mobile, tablet
+	// 18px after
+	&--responsive-large
+		padding: _rem(6px) _space(2)
+
+	// height 24px
+	&--vault
+		padding: _rem(3px) _space(.5)
+
+	//
+	// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+	+smalltablet()
+		// 48px height
+		&--cta
+			padding: _rem(11px) _space(6)
+			margin: 0 0 _space(2)
+
+		&.is-stacked
+			width: $form-width
+			margin: 0 auto _space(3)
+			& + &
+				margin: 0 auto _space(3)
+
+
+		&.is-stacked--settings
+			width: $form-setting-width
+
+	//
+	// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+	+tablet()
+		&.has-icon
+			height: _space(3)
+			width: @height
+
+		// 40px height again
+		// font-size: 18px
+		&--responsive,
+		&--responsive-large
+			padding: _rem(7px) _space(2)
+
+		&--mission
+			width: "calc( 100% - %s )" % _rem(64px)	//32px *2
+
+		// height 34px
+		&--vault
+			padding: _rem(8px) _space(1)
+
+// loading animation
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@keyframes loading
+	0%, 100%
+		transition-timing-function: cubic-bezier(1, 0, .65, .85)
+	0%
+		width: 0
+	100%
+		width: calc(100% + 1px)

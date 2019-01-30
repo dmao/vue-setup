@@ -1,0 +1,23 @@
+// Proportional box
+// -----------------------------------------------------------------------------
+// ```styl
+// .element-a
+//   u-box-proportional(0.5)
+//
+// .element-b
+//   u-box-proportional(100px, 50px)
+// ```
+//
+// ```css
+// .element-a {
+//   padding: 0 0 50%
+// }
+// .element-b {
+//   padding: 0 0 50%
+// }
+// ```
+// -----------------------------------------------------------------------------
+u-box-proportional($w, $h = null)
+  $ratio = $w && $h ? round($h / $w, 2): $w
+
+  padding: 0 0 unit(100 * $ratio, '%')

@@ -1,0 +1,27 @@
+.form
+  margin: 0 auto
+
+fieldset
+  margin: 0 0 _space(4)
+
+.button--form,
+.button--form-large
+  width: 100%
+
+//
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
++smalltablet()
+  .form,
+  .form--left
+    max-width: $form-width
+
+  .button--form
+    &.is-smaller
+      set-font-size(15px)  
+  
+  //- this button is used when we are not in a narrow form
+  .button--form-large
+    display: block
+    width: $form-width
+    margin: 0 auto _space(2)
+  

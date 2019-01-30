@@ -1,0 +1,252 @@
+// Title form & settings
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+legend,
+.legend
+.s-title
+	set-font-size(18px)
+	line-height: _space(3)
+	text-transform: uppercase
+	text-align: center
+	font-weight: bold
+
+legend,
+.legend
+	margin: 0 auto
+
+	&--small
+		set-font-size(15px)
+
+.s-title
+	margin: 0 0 _space(2)
+
+// Display
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-block
+	display: block
+
+.u-inline-block
+	display: inline-block
+
+// Font weight
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+strong,
+.u-font-bold
+	font-weight: bold
+
+.u-font-normal
+	font-weight: normal
+
+// Text shadow
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-text-shadow
+	u-text-shadow()
+
+.u-text-shadow--blue
+	text-shadow: 0 0 4px $primary
+
+// Font transformation
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-uppercase
+	text-transform: uppercase
+
+.u-underline
+	text-decoration: underline
+
+
+// Text Alignment
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-text-left
+	text-align: left
+
+.u-text-center
+	text-align: center
+
+.u-text-right
+	text-align: right
+
+// Font-size
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-text-2xs
+	set-font-size(10px)
+
+.u-text-xs
+	set-font-size(12px)
+
+.u-text-sm
+	set-font-size(14px)
+
+.u-text-base
+	set-font-size(15px)
+
+.u-text-lg
+	set-font-size(18px)
+
+.u-text-xl
+	set-font-size(20px) 
+
+.u-text-2xl
+	set-font-size(24px)
+
+.u-text-3xl
+	set-font-size(32px)
+
+.u-text-4xl
+	set-font-size(36px)
+
+.u-text-5xl
+	set-font-size(48px) 
+
+.u-text-6xl
+	set-font-size(60px)
+
+.u-text-7xl
+	set-font-size(70px)
+
+.u-text-9xl
+	set-font-size(90px)	
+
++lang(fi)
+	.fi-text-6xl
+		set-font-size(60px)
+
++smalltablet()
+	.st-text-xs
+		set-font-size(12px)
+
+	.st-text-sm
+		set-font-size(14px)
+
+	.st-text-base
+		set-font-size(15px)	
+
+	.st-text-lg
+		set-font-size(18px)
+
+	.st-text-xl
+		set-font-size(20px)
+
+	.st-text-2xl
+		set-font-size(24px)
+	
+	.st-text-5xl
+		set-font-size(48px)
+
+	.st-text-7xl
+		set-font-size(70px)
+
+	.st-text-9lg
+		set-font-size(90px)
+	
+	.st-text-11lg
+		set-font-size(110px)
+
+	+lang(fi)
+		.fi-sm-text-9xl
+			set-font-size(90px)	
+
++tablet()
+	.t-text-xs
+		set-font-size(12px)
+
+	.t-text-sm
+		set-font-size(14px)
+
+	.t-text-base
+		set-font-size(15px)	
+
+	.t-text-lg
+		set-font-size(18px)
+
+	.t-text-xl
+		set-font-size(20px)   
+	
+	.t-text-2xl
+		set-font-size(24px)
+
+	.t-text-7xl
+		set-font-size(70px)
+
+	.t-text-8xl
+		set-font-size(80px)
+
+	.t-text-11lg
+		set-font-size(135px)	
+
+	+lang(fi)
+		.fi-t-text-10xl
+			set-font-size(100px)	
+
++desktop()
+	.d-text-10xl
+		set-font-size(100px)
+
+
+// Line height
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-leading-narrow
+	line-height: .8
+
+.u-leading-none
+	line-height: 1
+
+.u-leading-tight
+	line-height: _space(2) // 16px
+
+.u-leading-normal
+	line-height: _space(3) // 24px
+
+.u-leading-loose
+	line-height: _space(4) // 32px
+
+.u-leading-large
+	line-height: _space(5) // 40px
+
++smalltablet()
+	.st-leading-normal
+		line-height: _space(3) // 24px
+
++tablet()
+	.t-leading-normal
+		line-height: _space(3) // 24px
+
+	.t-leading-loose
+		line-height: _space(4) // 32px 
+	
+
+// Margins
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-mb-1
+	margin: 0 0 _space(1)
+
+.u-mb-2
+	margin: 0 0 _space(2)
+
+.u-mb-3
+	margin: 0 0 _space(3)  
+
+// Whitespace & Wrapping
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-truncate
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+// hidding text
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-hide 
+	hide()
+
+// Font family
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-font-heading 
+	u-font-heading()
+
+// Letter spacing
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––	
+.u-tracking-wide
+	letter-spacing: 3px
+
+// Interactivity
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––	
+.u-cursor-pointer
+	cursor: pointer 
