@@ -1,7 +1,6 @@
 // vue.config.js
-const path = require('path')
-
-
+const path = require('path');
+const rnStyles = require('@betit/ramson-styles');
 
 module.exports = {
 
@@ -13,7 +12,46 @@ module.exports = {
 				Img: path.resolve(__dirname, 'src/assets/img')
       }
     }
+  },
+  
+  css: {
+    loaderOptions: {
+			// pass options to stylus-loader
+			stylus: {
+				preferPathResolver: 'webpack',
+				paths: [
+					path.resolve(__dirname, './src/assets/img'),
+					path.resolve(__dirname, './src/assets/css'),
+					path.resolve(__dirname, './src')
+        ],
+        import: path.resolve(__dirname, './src/assets/css/kaboo-core.styl'),
+        use: [
+          rnStyles({
+            url: rnStyles.relativeUrl
+          })
+        ]
+      }
+    }
 	},
+
+	pwa: {
+    name: 'My great App',
+    themeColor: '#4DBA87',
+    msTileColor: '#000000',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: 'black',
+
+  },
+
+  // chainWebpack: config => {
+  //   // GraphQL Loader
+  //   config.module
+  //     .rule('ramson-styles')
+  //     .test(/\.pug$/)
+  //     .use('graphql-tag/loader')
+  //       .loader('graphql-tag/loader')
+  //       .end()
+  // }
 	
 	// chainWebpack: config => {
 
@@ -33,29 +71,7 @@ module.exports = {
 
 
 
-  css: {
-    loaderOptions: {
-			// pass options to stylus-loader
-			stylus: {
-				preferPathResolver: 'webpack',
-				paths: [
-					path.resolve(__dirname, './src/assets/img'),
-					path.resolve(__dirname, './src/assets/css'),
-					path.resolve(__dirname, './src')
-				],
-				import: path.resolve(__dirname, './src/assets/css/kaboo-core.styl')
-      }
-    }
-	},
 
-	pwa: {
-    name: 'My great App',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
-    appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
-
-  }
 
 	// configureWebpack: {
 	// 	module: {

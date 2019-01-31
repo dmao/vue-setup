@@ -38,11 +38,11 @@ export default {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url("~Img/bg/bg--m-2x.jpg")
+    background-image: url("bg/bg--m-2x.jpg")
     background-repeat: no-repeat
     background-size: cover
-    // +retina()
-    //   background-size: cover
+    +retina()
+      background-size: cover
 
 
 </style>

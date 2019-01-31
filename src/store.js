@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    title: 'Find a beer',
+    title: 'title from Store',
     links: [
       'http://google.com',
       'http://coursetro.com',
