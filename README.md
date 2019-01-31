@@ -1,4 +1,6 @@
-# beer
+# Vue setup 
+
+with ramson-styles and Tailwind CSS.
 
 ## Project setup
 ```
